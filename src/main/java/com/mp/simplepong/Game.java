@@ -17,6 +17,8 @@ public class Game extends JPanel
     
     private Timer timer;
     
+    private boolean isAlive = false;
+    
     private int score = 0;
     private int delay = 8;
     
@@ -60,6 +62,9 @@ public class Game extends JPanel
         // gui-pong
         
         // gui-endscreen
+        if (true) {
+            // win-screen
+        }
         
         g.dispose();
     }
@@ -81,7 +86,14 @@ public class Game extends JPanel
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // TODO
+        
+        timer.start();
+        
+        if (isAlive) {
+            
+        }
+        
+        repaint();
     }
     
 }
