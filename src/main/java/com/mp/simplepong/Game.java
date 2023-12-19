@@ -6,13 +6,17 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.JPanel;
+import javax.swing.Timer;
 
 public class Game extends JPanel 
   implements KeyListener, ActionListener {
     
     // -- Variables
     
+    private Timer timer;
+    
     private int score = 0;
+    private int delay = 8;
     
     // player-1
     private int posX1;
@@ -27,6 +31,16 @@ public class Game extends JPanel
     private int posYB;
     private int dirXB;
     private int dirYB;
+    
+    // -- Class Methods
+    
+    public Game() {
+        addKeyListener(this);
+        setFocusTraversalKeysEnabled(true);
+        setFocusable(true);
+        timer = new Timer(delay, this);
+        timer.start();
+    }
     
     // -- Event Listeners
     
