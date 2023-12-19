@@ -1,6 +1,7 @@
 
 package com.mp.simplepong;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -47,6 +48,10 @@ public class Game extends JPanel
     
     @Override
     public void paint(Graphics g) {
+        
+        // gui-bg
+        g.setColor(Color.BLACK);
+        g.fillRect(0, 0, 800, 600);
         
         g.dispose();
     }
