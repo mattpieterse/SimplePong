@@ -100,7 +100,9 @@ public class Game extends JPanel
             Rectangle playColliderB = new Rectangle(/* TODO */);
             
             // change ball direction upon collision with any paddle
-            if (collisionExists(ballCollider, playColliderA, playColliderB)) {
+            if (collisionExists(ballCollider, playColliderA, playColliderB)) {           
+                if (collisionExists(ballCollider, playColliderA)) score1++;
+                if (collisionExists(ballCollider, playColliderB)) score2++;
                 dirXB = -dirXB;
             }
         }
@@ -110,6 +112,13 @@ public class Game extends JPanel
     
     private boolean collisionExists(Rectangle pong, Rectangle playerA, Rectangle playerB) {
         if (pong.intersects(playerA) || pong.intersects(playerB)) {
+            return true;
+        }
+        return false;
+    }
+    
+    private boolean collisionExists(Rectangle pong, Rectangle player) {
+        if (pong.intersects(player)) {
             return true;
         }
         return false;
