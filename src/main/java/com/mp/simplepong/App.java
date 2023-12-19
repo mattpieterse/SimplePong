@@ -9,7 +9,7 @@ public class App {
         
         JFrame scene = new JFrame();
         
-        scene.setSize(700, 600);
+        scene.setSize(800, 600);
         scene.setLocationRelativeTo(null);
         scene.setTitle("SimplePong (0.0.1)");
         scene.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
