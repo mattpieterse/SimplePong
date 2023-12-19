@@ -1,6 +1,7 @@
 
 package com.mp.simplepong;
 
+import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -35,16 +36,24 @@ public class Game extends JPanel
     // -- Class Methods
     
     public Game() {
+        
         addKeyListener(this);
         setFocusTraversalKeysEnabled(true);
         setFocusable(true);
+        
         timer = new Timer(delay, this);
         timer.start();
     }
     
+    @Override
+    public void paint(Graphics g) {
+        
+        g.dispose();
+    }
+    
     // -- Event Listeners
     
-    // <editor-fold defaultstate="collapsed" desc="Unused Overrides">
+    // <editor-fold defaultstate="collapsed" desc="Unused Listeners">
     @Override
     public void keyTyped(KeyEvent e) {}
     
