@@ -24,7 +24,9 @@ A simple implementation of the popular *pong* game in Java.
 
 **Compete in a head-on competition against yourself or your friends in this two-dimensional, local multiplayer implementation of paddle pong! Who will be the last one standing?**
 
-As a relatively novice Java programmer in his first year studying Computer & Information Sciences at University, this project stands out as a significant milestone, straying from the prescribed syllabus into the vast world of continuous self-studies. 
+As a relatively novice Java programmer in his first year studying Computer & Information Sciences at University, this project stands out as a significant milestone, straying from the prescribed syllabus into the vast world of continuous self-studies. I wanted a break from the usual development of mundane desktop apllications, and decided to learn how to create dynamic and lightweight graphical minigames.
+
+The graphical user interface (GUI) is hosted within a JFrame and JPanel from the native Swing libraries, with the game elements being drawn onto the JPanel using Graphics(2D) methods. The game elements are updated by event listeners that are bound to keyboard inputs – see table below for controls. Collisions are detected by using crude co-ordinate based colliders, and similarly, the movement also inherets this co-ordinate based system.
 
 <p align="right">(<a href="#start">Top</a>)</p>
 
