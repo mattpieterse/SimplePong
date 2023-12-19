@@ -16,6 +16,18 @@
   </p>
 </div>
 
+<!-- INFORMATION -->
+
+## About
+
+A simple implementation of the popular *pong* game in Java.
+
+**Compete in a head-on competition against yourself or your friends in this two-dimensional, local multiplayer implementation of paddle pong! Who will be the last one standing?**
+
+As a relatively novice Java programmer in his first year studying Computer & Information Sciences at University, this project stands out as a significant milestone, straying from the prescribed syllabus into the vast world of continuous self-studies. 
+
+<p align="right">(<a href="#start">Top</a>)</p>
+
 <!-- LICENSE -->
 
 ## License
