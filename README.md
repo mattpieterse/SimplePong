@@ -22,6 +22,10 @@
 
 A simple implementation of the popular *pong* game in Java.
 
+![GitHub Issues](https://img.shields.io/github/issues/mpiet-za/SimplePong?style=flat-square&label=Issues&labelColor=%23161b22&color=%234169E1)
+![GitHub Stars](https://img.shields.io/github/stars/mpiet-za/SimplePong?style=flat-square&label=Stars&labelColor=%23161b22&color=%234169E1)
+
+
 **Compete in a head-on competition against yourself or your friends in this two-dimensional, local multiplayer implementation of paddle pong! Who will be the last one standing?**
 
 As a relatively novice Java programmer in his first year studying Computer & Information Sciences at University, this project stands out as a significant milestone, straying from the prescribed syllabus into the vast world of continuous self-studies. I wanted a break from the usual development of mundane desktop apllications, and decided to learn how to create dynamic and lightweight graphical minigames.
