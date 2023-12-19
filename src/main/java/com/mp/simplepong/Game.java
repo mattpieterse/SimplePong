@@ -10,6 +10,26 @@ import javax.swing.JPanel;
 public class Game extends JPanel 
   implements KeyListener, ActionListener {
     
+    // -- Variables
+    
+    private int score = 0;
+    
+    // player-1
+    private int posX1;
+    private int posY1;
+    
+    // player-2
+    private int posX2;
+    private int posY2;
+    
+    // pongball
+    private int posXB;
+    private int posYB;
+    private int dirXB;
+    private int dirYB;
+    
+    // -- Event Listeners
+    
     // <editor-fold defaultstate="collapsed" desc="Unused Overrides">
     @Override
     public void keyTyped(KeyEvent e) {}
