@@ -15,3 +15,11 @@
     Java implementation of the pong game.
   </p>
 </div>
+
+<!-- LICENSE -->
+
+## License
+
+Ditributed under the **GPLv3 License**, see documentation for more information.
+
+<p align="right">(<a href="#readme-top">Top</a>)</p>
