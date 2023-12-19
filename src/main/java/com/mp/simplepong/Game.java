@@ -20,7 +20,9 @@ public class Game extends JPanel
     
     private boolean isAlive = false;
     
-    private int score = 0;
+    private int score1 = 0;
+    private int score2 = 0;
+    
     private int delay = 8;
     
     // player-1
@@ -56,7 +58,7 @@ public class Game extends JPanel
         g.setColor(Color.BLACK);
         g.fillRect(0, 0, 800, 600);
         
-        // gui-score
+        // gui-scores
         
         // gui-players
         
@@ -101,7 +103,6 @@ public class Game extends JPanel
             if (collisionExists(ballCollider, playColliderA, playColliderB)) {
                 dirXB = -dirXB;
             }
-            
         }
         
         repaint();
