@@ -28,16 +28,22 @@ public class Game extends JPanel
     // player-1
     private int posX1;
     private int posY1;
+    private int sizeW1;
+    private int sizeH1;
     
     // player-2
     private int posX2;
     private int posY2;
+    private int sizeW2;
+    private int sizeH2;
     
     // pongball
     private int posXB;
     private int posYB;
     private int dirXB;
     private int dirYB;
+    private int sizeWB;
+    private int sizeHB;
     
     // -- Class Methods
     
@@ -93,11 +99,10 @@ public class Game extends JPanel
         timer.start();
         
         if (isAlive) {
-            
             // update dynamic collision boxes
-            Rectangle ballCollider = new Rectangle(/* TODO */);
-            Rectangle playColliderA = new Rectangle(/* TODO */);
-            Rectangle playColliderB = new Rectangle(/* TODO */);
+            Rectangle playColliderA = new Rectangle(posX1, posY1, sizeW1, sizeH1);
+            Rectangle playColliderB = new Rectangle(posX2, posY2, sizeW2, sizeH2);
+            Rectangle ballCollider = new Rectangle(posXB, posYB, sizeWB, sizeHB);
             
             // change ball direction upon collision with any paddle
             if (collisionExists(ballCollider, playColliderA, playColliderB)) {           
