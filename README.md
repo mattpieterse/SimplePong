@@ -32,12 +32,14 @@ As a relatively novice Java programmer in his first year studying Computer & Inf
 
 The graphical user interface (GUI) is hosted within a JFrame and JPanel from the native Swing libraries, with the game elements being drawn onto the JPanel using Graphics(2D) methods. The game elements are updated by event listeners that are bound to keyboard inputs – see table below for controls. Collisions are detected by using crude co-ordinate based colliders, and similarly, the movement also inherets this co-ordinate based system.
 
-| Side | Keybind   | Action                    |
-| :--- | :-------- | :------------------------ |
-| `L`  | `W Key`   | Slide left pong upward    |
-| `L`  | `S Key`   | Slide left pong downward  |
-| `R`  | `VK_UP`   | Slide right pong upward   |
-| `R`  | `VK_DOWN` | Slide right pong downward |
+| SIDE | UP     | DOWN   |
+| :--: | :----: | :----: |
+| `L`  | `VK_Q` | `VK_W` |
+| `R`  | `VK_O` | `VK_P` |
+
+| TO RESTART |
+| :--------: |
+| VK_ENTER   |
 
 <p align="right">(<a href="#start">Top</a>)</p>
 
