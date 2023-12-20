@@ -76,8 +76,11 @@ public class Game extends JPanel
         g.fillOval(posXB, posYB, sizeHB, sizeWB);
         
         // gui-endscreen
-        if (true) {
+        if (posXB <= 0 || posXB >= (App.SIZE_W - sizeWB)) {
             // win-screen
+            isAlive = false;
+            dirXB = 0;
+            dirYB = 0;
         }
         
         g.dispose();
@@ -114,10 +117,6 @@ public class Game extends JPanel
         
         posXB += dirXB;
         posYB += dirYB;
-        
-        if (posXB <= 0 || posXB >= (App.SIZE_W - sizeWB)) {
-            dirXB = -dirXB;
-        }
         
         if (posYB <= 0 || posYB >= (App.SIZE_H - sizeHB)) {
             dirYB = -dirYB;
