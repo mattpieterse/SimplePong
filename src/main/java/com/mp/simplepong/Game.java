@@ -42,8 +42,8 @@ public class Game extends JPanel
     private int sizeHB = 20;
     private int posXB = (App.SIZE_W / 2) - (sizeWB / 2);
     private int posYB = (App.SIZE_H / 2) - (sizeHB / 2);
-    private int dirXB;
-    private int dirYB;
+    private int dirXB = -1;
+    private int dirYB = -2;
     
     // -- Class Methods
     
@@ -110,6 +110,17 @@ public class Game extends JPanel
                 if (collisionExists(ballCollider, playColliderB)) score2++;
                 dirXB = -dirXB;
             }
+        }
+        
+        posXB += dirXB;
+        posYB += dirYB;
+        
+        if (posXB <= 0 || posXB >= App.SIZE_W) {
+            dirXB = -dirXB;
+        }
+        
+        if (posYB <= 0 || posYB >= App.SIZE_H) {
+            dirXB = -dirXB;
         }
         
         repaint();
