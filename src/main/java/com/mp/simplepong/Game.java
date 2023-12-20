@@ -26,16 +26,16 @@ public class Game extends JPanel
     private int delay = 8;
     
     // player-1
-    private int posX1;
-    private int posY1;
-    private int sizeW1;
-    private int sizeH1;
+    private int sizeW1 = 10;
+    private int sizeH1 = 150;
+    private int posX1 = 10;
+    private int posY1 = (App.SIZE_H / 2) - (sizeH1 / 2);
     
     // player-2
-    private int posX2;
-    private int posY2;
-    private int sizeW2;
-    private int sizeH2;
+    private int sizeW2 = 10;
+    private int sizeH2 = 150;
+    private int posX2 = (App.SIZE_W - (10 + sizeW2));
+    private int posY2 = (App.SIZE_H / 2) - (sizeH2 / 2);
     
     // pongball
     private int sizeWB = 20;
@@ -67,6 +67,9 @@ public class Game extends JPanel
         // gui-scores
         
         // gui-players
+        g.setColor(Color.WHITE);
+        g.fillRect(posX1, posY1, sizeW1, sizeH1); // player-1
+        g.fillRect(posX2, posY2, sizeW2, sizeH2); // player-2
         
         // gui-pong
         g.setColor(Color.WHITE);
