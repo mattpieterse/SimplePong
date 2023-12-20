@@ -62,13 +62,15 @@ public class Game extends JPanel
         
         // gui-bg
         g.setColor(Color.BLACK);
-        g.fillRect(0, 0, 800, 600);
+        g.fillRect(0, 0, App.SIZE_W, App.SIZE_H);
         
         // gui-scores
         
         // gui-players
         
         // gui-pong
+        g.setColor(Color.WHITE);
+        g.fillOval(posXB, posYB, sizeHB, sizeWB);
         
         // gui-endscreen
         if (true) {
