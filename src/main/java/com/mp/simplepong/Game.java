@@ -94,11 +94,6 @@ public class Game extends JPanel
     // </editor-fold>
     
     @Override
-    public void keyPressed(KeyEvent e) {
-        // TODO
-    }
-
-    @Override
     public void actionPerformed(ActionEvent e) {
         
         timer.start();
@@ -134,4 +129,25 @@ public class Game extends JPanel
         return false;
     }
     
+    @Override
+    public void keyPressed(KeyEvent e) {
+        
+        switch (e.getKeyCode()) {
+            case (KeyEvent.VK_Q) -> {
+                // p1-up
+            }
+            case (KeyEvent.VK_W) -> {
+                // p1-down
+            }
+            case (KeyEvent.VK_O) -> {
+                // p2-up
+            }
+            case (KeyEvent.VK_P) -> {
+                // p2-down
+            }
+            case (KeyEvent.VK_ENTER) -> {
+                // restart
+            }
+        }
+    }
 }
