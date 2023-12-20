@@ -2,6 +2,7 @@
 package com.mp.simplepong;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
@@ -53,6 +54,8 @@ public class Game extends JPanel
         setFocusTraversalKeysEnabled(true);
         setFocusable(true);
         
+        isAlive = true;
+        
         timer = new Timer(delay, this);
         timer.start();
     }
@@ -65,6 +68,9 @@ public class Game extends JPanel
         g.fillRect(0, 0, App.SIZE_W, App.SIZE_H);
         
         // gui-scores
+        g.setColor(Color.LIGHT_GRAY);
+        g.setFont(new Font("serif", Font.BOLD, 25));
+        g.drawString(score1 + " : " + score2, 40, 30);
         
         // gui-players
         g.setColor(Color.WHITE);
@@ -73,11 +79,15 @@ public class Game extends JPanel
         
         // gui-pong
         g.setColor(Color.WHITE);
+        if (!isAlive) g.setColor(Color.LIGHT_GRAY);
         g.fillOval(posXB, posYB, sizeHB, sizeWB);
         
         // gui-endscreen
         if (posXB <= 0 || posXB >= (App.SIZE_W - sizeWB)) {
             // win-screen
+            g.setColor(Color.LIGHT_GRAY);
+            g.setFont(new Font("serif", Font.BOLD, 25));
+            g.drawString("ENTER TO RESTART", 270, 30);
             isAlive = false;
             dirXB = 0;
             dirYB = 0;
@@ -145,44 +155,52 @@ public class Game extends JPanel
         switch (e.getKeyCode()) {
             case (KeyEvent.VK_Q) -> {
                 // p1-up
+                if (!isAlive) return;
                 if (posY1 <= 0) {
                     posY1 = 0;
                     return;
                 }
-                isAlive = true;
                 posY1 -= 20;
             }
             case (KeyEvent.VK_W) -> {
                 // p1-down
+                if (!isAlive) return;
                 if (posY1 >= (App.SIZE_H - sizeH1)) {
                     posY1 = (App.SIZE_H - sizeH1);
                     return;
                 }
-                isAlive = true;
                 posY1 += 20;
             }
             case (KeyEvent.VK_O) -> {
                 // p2-up
+                if (!isAlive) return;
                 if (posY2 <= 0) {
                     posY2 = 0;
                     return;
                 }
-                isAlive = true;
                 posY2 -= 20;
             }
             case (KeyEvent.VK_P) -> {
                 // p2-down
+                if (!isAlive) return;
                 if (posY2 >= (App.SIZE_H - sizeH2)) {
                     posY2 = (App.SIZE_H - sizeH2);
                     return;
                 }
-                isAlive = true;
                 posY2 += 20;
             }
             case (KeyEvent.VK_ENTER) -> {
                 // restart
                 if (!isAlive) {
-                    
+                    isAlive = true;
+                    score1 = 0;
+                    score2 = 0;
+                    posY1 = (App.SIZE_H / 2) - (sizeH1 / 2);
+                    posY2 = (App.SIZE_H / 2) - (sizeH2 / 2);
+                    posXB = (App.SIZE_W / 2) - (sizeWB / 2);
+                    posYB = (App.SIZE_H / 2) - (sizeHB / 2);
+                    dirXB = -1;
+                    dirYB = -2;
                 }
             }
         }
