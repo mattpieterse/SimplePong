@@ -135,18 +135,45 @@ public class Game extends JPanel
         switch (e.getKeyCode()) {
             case (KeyEvent.VK_Q) -> {
                 // p1-up
+                if (posY1 <= 0) {
+                    posY1 = 0;
+                    return;
+                }
+                isAlive = true;
+                posY1 -= 20;
             }
             case (KeyEvent.VK_W) -> {
                 // p1-down
+                if (posY1 >= (App.SIZE_H - sizeH1)) {
+                    posY1 = (App.SIZE_H - sizeH1);
+                    return;
+                }
+                isAlive = true;
+                posY1 += 20;
             }
             case (KeyEvent.VK_O) -> {
                 // p2-up
+                if (posY2 <= 0) {
+                    posY2 = 0;
+                    return;
+                }
+                isAlive = true;
+                posY2 -= 20;
             }
             case (KeyEvent.VK_P) -> {
                 // p2-down
+                if (posY2 >= (App.SIZE_H - sizeH2)) {
+                    posY2 = (App.SIZE_H - sizeH2);
+                    return;
+                }
+                isAlive = true;
+                posY2 += 20;
             }
             case (KeyEvent.VK_ENTER) -> {
                 // restart
+                if (!isAlive) {
+                    
+                }
             }
         }
     }
