@@ -115,12 +115,12 @@ public class Game extends JPanel
         posXB += dirXB;
         posYB += dirYB;
         
-        if (posXB <= 0 || posXB >= App.SIZE_W) {
+        if (posXB <= 0 || posXB >= (App.SIZE_W - sizeWB)) {
             dirXB = -dirXB;
         }
         
-        if (posYB <= 0 || posYB >= App.SIZE_H) {
-            dirXB = -dirXB;
+        if (posYB <= 0 || posYB >= (App.SIZE_H - sizeHB)) {
+            dirYB = -dirYB;
         }
         
         repaint();
