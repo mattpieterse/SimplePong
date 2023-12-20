@@ -40,8 +40,8 @@ public class Game extends JPanel
     // pongball
     private int sizeWB = 20;
     private int sizeHB = 20;
-    private int posXB = (App.SIZE_W / 2) + (sizeWB / 2);
-    private int posYB = (App.SIZE_H / 2) + (sizeHB / 2);
+    private int posXB = (App.SIZE_W / 2) - (sizeWB / 2);
+    private int posYB = (App.SIZE_H / 2) - (sizeHB / 2);
     private int dirXB;
     private int dirYB;
     

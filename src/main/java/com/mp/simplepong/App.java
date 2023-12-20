@@ -1,6 +1,7 @@
 
 package com.mp.simplepong;
 
+import java.awt.Dimension;
 import javax.swing.JFrame;
 
 public class App {
@@ -13,12 +14,13 @@ public class App {
         Game game = new Game();
         JFrame scene = new JFrame();
         
-        scene.setSize(SIZE_W, SIZE_H);
-        scene.setLocationRelativeTo(null);
         scene.setTitle("SimplePong (0.0.1)");
         scene.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         scene.setResizable(false);
+        game.setPreferredSize(new Dimension(SIZE_W, SIZE_H));
         scene.add(game);
+        scene.pack();
+        scene.setLocationRelativeTo(null);
         scene.setVisible(true);
     }
 }
